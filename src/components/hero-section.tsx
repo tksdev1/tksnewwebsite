@@ -59,10 +59,10 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.75, ease: "easeOut" }}
         >
           <p className="md:col-span-6 lg:col-span-5 text-[18px] leading-relaxed text-canvas/85">
-            TechKey Solutions is a boutique partner delivering CRM, ERP, AI,
-            app development and integration services that streamline
-            operations, sharpen decisions and drive growth — for companies
-            of every size.
+            TechKey Solutions helps small and mid-sized businesses implement
+            practical AI solutions that reduce manual work, improve customer
+            response times, and help teams scale efficiently. We focus on real
+            operational outcomes — not experimental AI projects.
           </p>
           <div className="md:col-span-6 lg:col-start-8 lg:col-span-5 flex flex-wrap items-center gap-4">
             <Link href="/contact" className="btn-primary">

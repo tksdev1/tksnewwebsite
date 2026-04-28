@@ -4,21 +4,21 @@ import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
 import { site } from "@/lib/site";
 
-const pageTitle = "AI Transformation — Implementation, Training & Workflow Automation";
+const pageTitle = "AI Automation for Business — Assessment, Implementation & Optimization";
 const pageDescription =
-  "TechKey Solutions embeds with your team for a 90-day AI transformation: workflow audit, production deployment, role-specific training, and self-sustaining systems. Boutique AI implementation since 2016.";
+  "TechKey Solutions helps small and mid-sized businesses implement practical AI automation — from a $4,500 workflow assessment to full-scale AI transformation. Real outcomes, not experiments.";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
-    "AI transformation",
-    "AI implementation services",
-    "enterprise AI consulting",
+    "AI automation for small business",
+    "AI business optimization",
     "AI workflow automation",
-    "AI training for teams",
-    "generative AI deployment",
-    "AI agent development",
+    "AI implementation services",
+    "lead automation",
+    "customer service automation",
+    "AI consulting for SMB",
     "TechKey Solutions",
   ],
   alternates: { canonical: "/services/ai" },
@@ -106,57 +106,59 @@ const phases = [
 
 const tiers = [
   {
-    name: "Accelerate",
-    audience: "For teams adopting AI in a structured way for the first time.",
+    name: "Starter AI Launch",
+    audience: "Small businesses wanting immediate efficiency wins.",
     deliverables: [
-      "Comprehensive workflow audit and opportunity assessment",
-      "AI tool deployment across priority workflows",
-      "Hands-on team training program",
-      "Custom prompt libraries and usage playbooks",
-      "Bi-weekly optimization sprints with performance tracking",
+      "1–2 workflow automations",
+      "Lead follow-up automation",
+      "Basic chatbot setup",
+      "CRM automation cleanup",
+      "Basic reporting dashboard",
+      "Staff training & implementation support",
     ],
   },
   {
-    name: "Transform",
-    audience: "For organizations re-engineering one or more departments.",
+    name: "Growth AI Package",
+    audience: "Growing businesses automating multiple functions.",
     deliverables: [
-      "Everything in Accelerate, plus:",
-      "Custom AI agent and workflow automation development",
-      "Full departmental workflow re-engineering",
-      "Technical integration with existing tools and APIs",
-      "Weekly executive strategy sessions",
+      "Everything in Starter, plus:",
+      "Multi-department workflow automation",
+      "Customer service & marketing automation",
+      "Sales & document automation",
+      "Advanced dashboards",
+      "SOP redesign",
     ],
   },
   {
-    name: "Enterprise",
-    audience: "For company-wide transformation with executive sponsorship.",
+    name: "Scale AI Transformation",
+    audience: "Mid-sized businesses seeking broader transformation.",
     deliverables: [
-      "Everything in Transform, plus:",
-      "Dedicated embedded team",
-      "Proprietary AI tool and internal product development",
-      "Company-wide rollout with structured change management",
-      "C-suite AI strategy and technology roadmap",
-      "Post-engagement support and transition period",
+      "Everything in Growth, plus:",
+      "Custom AI assistants",
+      "Advanced integrations & cross-platform automation",
+      "Executive dashboards",
+      "Department transformation",
+      "AI operating model design",
     ],
   },
 ];
 
 const outcomes = [
   {
-    label: "Hours reclaimed",
-    body: "Per-employee weekly time savings on manual, repetitive tasks — measured against pre-engagement baselines.",
+    label: "Reduced manual work",
+    body: "Automations eliminate the repetitive, high-volume tasks your team spends hours on every week.",
   },
   {
-    label: "Operating cost reduction",
-    body: "Measurable departmental cost impact when custom automations replace recurring manual processes.",
+    label: "Faster customer response",
+    body: "AI-powered customer service and lead follow-up that responds in minutes — not hours or days.",
   },
   {
-    label: "AI fluency",
-    body: "Every team member trained on workflows contextualized to their role — not generic prompt courses.",
+    label: "Scalable operations",
+    body: "Handle more volume without proportionally growing headcount — your systems do more of the lifting.",
   },
   {
-    label: "Compounding advantage",
-    body: "Systems and documentation that keep improving inside your team after we transition out.",
+    label: "Measurable ROI",
+    body: "Every engagement includes ROI projections upfront and performance tracking throughout — so you always know what you&apos;re getting.",
   },
 ];
 
@@ -175,7 +177,7 @@ const jsonLd = {
   },
   description: pageDescription,
   areaServed: "United States",
-  serviceOutput: "Production AI workflows, trained internal teams, sustainable productivity gains.",
+  serviceOutput: "Deployed AI automations, reduced manual work, improved customer response times, measurable ROI.",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "AI Transformation Engagement Tiers",
@@ -209,15 +211,15 @@ export default function AITransformationPage() {
           </div>
 
           <h1 className="hero-headline mt-8 max-w-[20ch] text-canvas">
-            Turn AI from a tool into a system.
+            AI automation that actually works.
           </h1>
 
           <div className="mt-12 grid md:grid-cols-12 gap-10 items-end">
             <p className="md:col-span-6 lg:col-span-6 text-[18px] leading-relaxed text-canvas/85">
-              We embed with your team for 90 days. We deploy AI tools and
-              automations across your highest-leverage workflows, train your
-              people to own them, and leave behind self-sustaining systems
-              that continue compounding in value after we&apos;re gone.
+              We don&apos;t just deploy AI tools — we ensure they drive
+              measurable business results. From workflow assessment to live
+              automation to team training, we handle the full process so your
+              business keeps running better long after launch.
             </p>
             <div className="md:col-span-6 lg:col-start-8 lg:col-span-5 flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-primary">
@@ -320,9 +322,9 @@ export default function AITransformationPage() {
         <Container>
           <SectionHeading
             index="IV."
-            eyebrow="Engagement tiers"
-            title="Three tiers. One outcome: AI that runs alongside your team."
-            lede="Every engagement runs the same 90-day framework. The difference is depth — how many workflows we touch, how much we build vs. configure, and how deeply we embed."
+            eyebrow="Implementation packages"
+            title="Three packages. One outcome: AI that drives real business results."
+            lede="The difference is depth — how many workflows we automate, how many departments we touch, and how transformative the scope. Every package includes mandatory post-launch support."
           />
 
           <div className="mt-16 grid lg:grid-cols-3 gap-6">
@@ -355,9 +357,9 @@ export default function AITransformationPage() {
           </div>
 
           <p className="mt-12 text-[15px] text-ink-soft">
-            We&apos;ll match you to the right tier on a call.{" "}
-            <Link href="/contact" className="text-ink link-underline">
-              Get in touch →
+            Not sure which fits? We&apos;ll figure it out together on a call.{" "}
+            <Link href="/services" className="text-ink link-underline">
+              See full package details & pricing →
             </Link>
           </p>
         </Container>
@@ -369,8 +371,8 @@ export default function AITransformationPage() {
           <SectionHeading
             index="V."
             eyebrow="What to expect"
-            title="Productivity gains that compound after we leave."
-            lede="Our success is measured by whether the systems we build keep performing once we transition out — not by whether you renew."
+            title="Real operational outcomes — not experimental AI."
+            lede="We measure success by the business results your automations deliver — reduced manual work, faster response times, and teams that can scale without burning out."
           />
 
           <dl className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 border-t border-line pt-12">

@@ -18,18 +18,26 @@ const iconProps = {
 
 const serviceTiles = [
   {
-    title: "Business Software",
-    href: "/services",
+    title: "Lead & Sales Automation",
+    href: "/services/ai",
     icon: (
       <svg {...iconProps} aria-hidden="true">
-        <rect width="20" height="14" x="2" y="6" rx="2" />
-        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
   },
   {
-    title: "Artificial Intelligence",
-    href: "/services",
+    title: "Customer Service AI",
+    href: "/services/ai",
+    icon: (
+      <svg {...iconProps} aria-hidden="true">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Workflow Automation",
+    href: "/services/ai",
     icon: (
       <svg {...iconProps} aria-hidden="true">
         <rect width="16" height="16" x="4" y="4" rx="2" />
@@ -39,22 +47,13 @@ const serviceTiles = [
     ),
   },
   {
-    title: "Websites & Integrations",
-    href: "/services",
+    title: "Reporting & Dashboards",
+    href: "/services/ai",
     icon: (
       <svg {...iconProps} aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-      </svg>
-    ),
-  },
-  {
-    title: "App Development",
-    href: "/services",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-        <path d="M12 18h.01" />
+        <line x1="18" x2="18" y1="20" y2="10" />
+        <line x1="12" x2="12" y1="20" y2="4" />
+        <line x1="6" x2="6" y1="20" y2="14" />
       </svg>
     ),
   },
@@ -62,39 +61,43 @@ const serviceTiles = [
 
 const principles = [
   {
-    title: "Enhanced decision-making.",
-    body: "We surface hidden patterns in your data so every decision is backed by evidence, not intuition.",
+    title: "Real results, not experiments.",
+    body: "Every automation we implement is tied to a measurable outcome — leads converted, hours reclaimed, costs reduced. No vanity AI projects.",
   },
   {
-    title: "Personalized customer experience.",
-    body: "CRM systems that anticipate what your customers need — before they ask.",
+    title: "Done-for-you implementation.",
+    body: "We handle the full process: workflow analysis, automation build, staff training, and ongoing optimization. Your team gets the benefits without the technical overhead.",
   },
   {
-    title: "Continuous improvement.",
-    body: "Ongoing optimization keeps you ahead in a market that won&apos;t sit still.",
+    title: "Right-sized for your business.",
+    body: "Our solutions are built for small and mid-sized businesses — practical scope, efficient timelines, and investments that make sense at your scale.",
   },
   {
-    title: "Unmatched efficiency.",
-    body: "Automate the repetitive work so your team can focus on what actually moves the business.",
+    title: "Optimization built in.",
+    body: "Every engagement includes mandatory post-launch support so your automations keep improving — not just deployed and forgotten.",
   },
 ];
 
 const aiSolutions = [
-  "Chatbots",
-  "Marketing automation",
-  "Virtual assistants",
-  "Data-driven decisions",
-  "Smart document processing",
-  "Predictive maintenance",
+  "Lead Automation",
+  "Customer Service Automation",
+  "Scheduling Automation",
+  "CRM Optimization",
+  "Document Automation",
+  "Internal AI Assistants",
+  "Reporting Dashboards",
+  "Workflow Automation",
 ];
 
 const aiSolutionBodies = [
-  "Always-on conversational agents that qualify leads and answer the routine questions your team fields every day.",
-  "Multi-channel campaigns that reach the right person with the right message at the right moment — automatically.",
-  "AI assistants that handle scheduling, research and routine admin so your team can focus on high-impact work.",
-  "Turn raw data into dashboards and forecasts that guide every decision — operational, financial and strategic.",
-  "Extract, classify and route documents automatically. No more manual data entry from PDFs and scans.",
-  "Spot failures before they cost you downtime, with sensor-driven models trained on your own equipment data.",
+  "Automatically follow up with leads, qualify prospects, and sync activity to your CRM — so no opportunity falls through the cracks.",
+  "Always-on AI that handles routine customer inquiries, routes support tickets, and escalates issues — without adding headcount.",
+  "Intelligent scheduling that coordinates appointments, staff, and resources without back-and-forth email chains.",
+  "Clean up your CRM data, automate data entry, and build workflows that keep your pipeline healthy and up to date.",
+  "Automatically generate, route, and process proposals, contracts, and business documents — cutting hours from every deal.",
+  "Custom AI assistants trained on your processes to answer team questions, surface knowledge, and guide daily decisions.",
+  "Real-time dashboards and automated reports that give leadership clear visibility into performance, KPIs, and trends.",
+  "End-to-end automation of multi-step business processes — eliminating manual handoffs and human error across departments.",
 ];
 
 const partners = [
@@ -131,8 +134,8 @@ export default function HomePage() {
             <SectionHeading
               index="I."
               eyebrow="Why TechKey"
-              title="Built to move your business forward."
-              lede="We partner with companies of every size to turn technology into a measurable edge — not just a line item."
+              title="AI that earns its keep."
+              lede="We implement practical AI solutions that reduce manual work, improve response times, and help your team scale — without the experimentation overhead."
             />
           </AnimateIn>
 
@@ -161,9 +164,9 @@ export default function HomePage() {
           <AnimateIn>
             <SectionHeading
               index="II."
-              eyebrow="Capabilities"
-              title="One partner for the full software stack."
-              lede="From front-of-house CRM to the plumbing that ties your systems together — we build, integrate and operate all of it."
+              eyebrow="Common solutions"
+              title="The automations that move the needle fastest."
+              lede="We focus on high-impact, proven AI implementations — not science projects. These are the solutions small and mid-sized businesses use every day."
             />
           </AnimateIn>
 
@@ -183,7 +186,7 @@ export default function HomePage() {
               href="/services"
               className="mt-12 inline-flex items-center gap-2 text-[14px] text-ink link-underline"
             >
-              Browse every capability →
+              See all packages & pricing →
             </Link>
           </AnimateIn>
         </Container>
@@ -195,13 +198,13 @@ export default function HomePage() {
           <AnimateIn>
             <SectionHeading
               index="III."
-              eyebrow="AI in action"
-              title="Putting intelligence into action."
-              lede="The best first AI projects remove a repetitive, high-volume task someone hates doing. We've shipped all six of these with small teams."
+              eyebrow="What we automate"
+              title="Eight solutions, proven in the field."
+              lede="The best first AI projects eliminate a repetitive, high-volume task your team hates doing. Here's what we deploy for small and mid-sized businesses."
             />
           </AnimateIn>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-line">
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-line">
             {aiSolutions.map((title, i) => (
               <AnimateIn key={title} delay={(i % 3) * 0.08}>
                 <div className="border-r border-b border-line p-8 hover:bg-canvas-blue/40 transition group h-full">
@@ -268,11 +271,12 @@ export default function HomePage() {
               <div className="lg:col-span-8">
                 <p className="num-label">IV. / Next step</p>
                 <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
-                  Ready to start your AI journey?
+                  Ready to see where AI pays off in your business?
                 </h2>
                 <p className="mt-6 text-[17px] leading-relaxed text-ink-soft max-w-xl">
-                  Book a free consultation and we&apos;ll map a practical path to
-                  the outcomes you&apos;re after — no jargon, no fluff.
+                  We&apos;ll analyze your workflows, identify your highest-ROI
+                  automation opportunities, and build a 60-day roadmap — no
+                  jargon, no fluff.
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-4">

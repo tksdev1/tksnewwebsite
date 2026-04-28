@@ -19,14 +19,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechKey Solutions — The key to all your software needs",
+  title: "TechKey Solutions — AI Automation & Business Optimization",
   description:
-    "A boutique consulting firm delivering CRM, ERP, AI, app development and integration services since 2016.",
+    "TechKey Solutions helps small and mid-sized businesses implement practical AI solutions that reduce manual work, improve customer response times, and drive measurable results.",
   metadataBase: new URL("https://thetks.com"),
   openGraph: {
     title: "TechKey Solutions",
     description:
-      "CRM, ERP, AI, app development and integration services that drive real business growth.",
+      "Practical AI automation for small and mid-sized businesses. Real operational outcomes — not experimental AI projects.",
     url: "https://thetks.com",
     siteName: "TechKey Solutions",
     type: "website",
