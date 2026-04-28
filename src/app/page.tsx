@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
+import { HeroSection } from "@/components/hero-section";
+import { AnimateIn } from "@/components/animate-in";
 import { site } from "@/lib/site";
 
 const iconProps = {
@@ -86,6 +88,15 @@ const aiSolutions = [
   "Predictive maintenance",
 ];
 
+const aiSolutionBodies = [
+  "Always-on conversational agents that qualify leads and answer the routine questions your team fields every day.",
+  "Multi-channel campaigns that reach the right person with the right message at the right moment — automatically.",
+  "AI assistants that handle scheduling, research and routine admin so your team can focus on high-impact work.",
+  "Turn raw data into dashboards and forecasts that guide every decision — operational, financial and strategic.",
+  "Extract, classify and route documents automatically. No more manual data entry from PDFs and scans.",
+  "Spot failures before they cost you downtime, with sensor-driven models trained on your own equipment data.",
+];
+
 const partners = [
   "Salesforce",
   "Microsoft Dynamics",
@@ -110,128 +121,105 @@ const partners = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO — TKS dark navy with decorative gradient + grid */}
-      <section className="hero-bg text-canvas">
-        <Container className="pt-24 pb-28 lg:pt-32 lg:pb-36">
-          <div className="flex items-center gap-3">
-            <span className="num-label !text-accent">Est. {site.established}</span>
-            <span className="h-px w-10 bg-canvas/30" />
-            <span className="eyebrow !text-canvas/70">Boutique consulting firm</span>
-          </div>
-
-          <h1 className="hero-headline mt-8 max-w-[18ch] text-canvas">
-            The key to all your software needs.
-          </h1>
-
-          <div className="mt-12 grid md:grid-cols-12 gap-10 items-end">
-            <p className="md:col-span-6 lg:col-span-5 text-[18px] leading-relaxed text-canvas/85">
-              TechKey Solutions is a boutique partner delivering CRM, ERP, AI,
-              app development and integration services that streamline
-              operations, sharpen decisions and drive growth — for companies
-              of every size.
-            </p>
-            <div className="md:col-span-6 lg:col-start-8 lg:col-span-5 flex flex-wrap items-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                <span>Book a consultation</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-              <Link
-                href="/services"
-                className="text-[13px] text-canvas/85 hover:text-canvas link-underline"
-              >
-                See what we do
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
-
+      {/* HERO */}
+      <HeroSection />
 
       {/* PRINCIPLES / WHY */}
       <section className="py-24">
         <Container>
-          <SectionHeading
-            index="I."
-            eyebrow="Why TechKey"
-            title="Built to move your business forward."
-            lede="We partner with companies of every size to turn technology into a measurable edge — not just a line item."
-          />
+          <AnimateIn>
+            <SectionHeading
+              index="I."
+              eyebrow="Why TechKey"
+              title="Built to move your business forward."
+              lede="We partner with companies of every size to turn technology into a measurable edge — not just a line item."
+            />
+          </AnimateIn>
 
           <div className="mt-20 grid md:grid-cols-2 gap-x-16 gap-y-14 md:border-t md:border-line md:pt-14">
             {principles.map((p, i) => (
-              <div key={p.title} className="relative">
-                <span className="num-label">0{i + 1}</span>
-                <h3 className="display mt-3 text-2xl text-ink leading-[1.1]">
-                  {p.title}
-                </h3>
-                <p
-                  className="mt-4 text-[15px] leading-relaxed text-ink-soft"
-                  dangerouslySetInnerHTML={{ __html: p.body }}
-                />
-              </div>
+              <AnimateIn key={p.title} delay={i * 0.1}>
+                <div className="relative">
+                  <span className="num-label">0{i + 1}</span>
+                  <h3 className="display mt-3 text-2xl text-ink leading-[1.1]">
+                    {p.title}
+                  </h3>
+                  <p
+                    className="mt-4 text-[15px] leading-relaxed text-ink-soft"
+                    dangerouslySetInnerHTML={{ __html: p.body }}
+                  />
+                </div>
+              </AnimateIn>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* SERVICES — TKS blue-gradient signature tiles */}
+      {/* SERVICES */}
       <section className="py-24 border-y border-line bg-canvas-2">
         <Container>
-          <SectionHeading
-            index="II."
-            eyebrow="Capabilities"
-            title="One partner for the full software stack."
-            lede="From front-of-house CRM to the plumbing that ties your systems together — we build, integrate and operate all of it."
-          />
+          <AnimateIn>
+            <SectionHeading
+              index="II."
+              eyebrow="Capabilities"
+              title="One partner for the full software stack."
+              lede="From front-of-house CRM to the plumbing that ties your systems together — we build, integrate and operate all of it."
+            />
+          </AnimateIn>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {serviceTiles.map((tile) => (
-              <Link key={tile.title} href={tile.href} className="tile-card">
-                <span className="tile-card-icon">{tile.icon}</span>
-                <span className="tile-card-label">{tile.title}</span>
-              </Link>
+            {serviceTiles.map((tile, i) => (
+              <AnimateIn key={tile.title} delay={i * 0.1}>
+                <Link href={tile.href} className="tile-card">
+                  <span className="tile-card-icon">{tile.icon}</span>
+                  <span className="tile-card-label">{tile.title}</span>
+                </Link>
+              </AnimateIn>
             ))}
           </div>
 
-          <Link
-            href="/services"
-            className="mt-12 inline-flex items-center gap-2 text-[14px] text-ink link-underline"
-          >
-            Browse every capability →
-          </Link>
+          <AnimateIn delay={0.3}>
+            <Link
+              href="/services"
+              className="mt-12 inline-flex items-center gap-2 text-[14px] text-ink link-underline"
+            >
+              Browse every capability →
+            </Link>
+          </AnimateIn>
         </Container>
       </section>
 
       {/* AI IN ACTION */}
       <section className="py-24">
         <Container>
-          <SectionHeading
-            index="III."
-            eyebrow="AI in action"
-            title="Putting intelligence into action."
-            lede="The best first AI projects remove a repetitive, high-volume task someone hates doing. We've shipped all six of these with small teams."
-          />
+          <AnimateIn>
+            <SectionHeading
+              index="III."
+              eyebrow="AI in action"
+              title="Putting intelligence into action."
+              lede="The best first AI projects remove a repetitive, high-volume task someone hates doing. We've shipped all six of these with small teams."
+            />
+          </AnimateIn>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-line">
             {aiSolutions.map((title, i) => (
-              <div
-                key={title}
-                className="border-r border-b border-line p-8 hover:bg-canvas-blue/40 transition group"
-              >
-                <span className="num-label">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="display mt-5 text-2xl text-ink leading-tight">
-                  {title}
-                </h3>
-                <p className="mt-3 text-[14px] text-ink-soft leading-relaxed">
-                  {aiSolutionBodies[i]}
-                </p>
-                <span
-                  aria-hidden="true"
-                  className="mt-6 inline-block text-ink-soft group-hover:translate-x-0.5 group-hover:text-accent transition"
-                >
-                  →
-                </span>
-              </div>
+              <AnimateIn key={title} delay={(i % 3) * 0.08}>
+                <div className="border-r border-b border-line p-8 hover:bg-canvas-blue/40 transition group h-full">
+                  <span className="num-label">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="display mt-5 text-2xl text-ink leading-tight">
+                    {title}
+                  </h3>
+                  <p className="mt-3 text-[14px] text-ink-soft leading-relaxed">
+                    {aiSolutionBodies[i]}
+                  </p>
+                  <span
+                    aria-hidden="true"
+                    className="mt-6 inline-block text-ink-soft group-hover:translate-x-0.5 group-hover:text-accent transition"
+                  >
+                    →
+                  </span>
+                </div>
+              </AnimateIn>
             ))}
           </div>
         </Container>
@@ -240,15 +228,17 @@ export default function HomePage() {
       {/* PARTNERS MARQUEE */}
       <section className="py-20 border-y border-line bg-canvas-2">
         <Container>
-          <div className="flex flex-wrap items-baseline justify-between gap-6">
-            <p className="eyebrow">Platforms we work on</p>
-            <Link
-              href="/services"
-              className="text-[13px] text-ink-soft link-underline"
-            >
-              See the full list →
-            </Link>
-          </div>
+          <AnimateIn>
+            <div className="flex flex-wrap items-baseline justify-between gap-6">
+              <p className="eyebrow">Platforms we work on</p>
+              <Link
+                href="/services"
+                className="text-[13px] text-ink-soft link-underline"
+              >
+                See the full list →
+              </Link>
+            </div>
+          </AnimateIn>
         </Container>
         <div className="mt-8 marquee-mask overflow-hidden">
           <div className="flex gap-x-10 animate-[marquee_45s_linear_infinite] whitespace-nowrap">
@@ -273,39 +263,32 @@ export default function HomePage() {
       {/* CTA */}
       <section className="py-28">
         <Container>
-          <div className="grid lg:grid-cols-12 gap-10 items-end">
-            <div className="lg:col-span-8">
-              <p className="num-label">IV. / Next step</p>
-              <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
-                Ready to start your AI journey?
-              </h2>
-              <p className="mt-6 text-[17px] leading-relaxed text-ink-soft max-w-xl">
-                Book a free consultation and we&apos;ll map a practical path to
-                the outcomes you&apos;re after — no jargon, no fluff.
-              </p>
+          <AnimateIn>
+            <div className="grid lg:grid-cols-12 gap-10 items-end">
+              <div className="lg:col-span-8">
+                <p className="num-label">IV. / Next step</p>
+                <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
+                  Ready to start your AI journey?
+                </h2>
+                <p className="mt-6 text-[17px] leading-relaxed text-ink-soft max-w-xl">
+                  Book a free consultation and we&apos;ll map a practical path to
+                  the outcomes you&apos;re after — no jargon, no fluff.
+                </p>
+              </div>
+              <div className="lg:col-span-4 flex flex-col gap-4">
+                <Link href="/contact" className="btn-primary">
+                  <span>Book a free consultation</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
+                <a href={`mailto:${site.email}`} className="btn-secondary">
+                  <span>{site.email}</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
-            <div className="lg:col-span-4 flex flex-col gap-4">
-              <Link href="/contact" className="btn-primary">
-                <span>Book a free consultation</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-              <a href={`mailto:${site.email}`} className="btn-secondary">
-                <span>{site.email}</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
+          </AnimateIn>
         </Container>
       </section>
     </>
   );
 }
-
-const aiSolutionBodies = [
-  "Always-on conversational agents that qualify leads and answer the routine questions your team fields every day.",
-  "Multi-channel campaigns that reach the right person with the right message at the right moment — automatically.",
-  "AI assistants that handle scheduling, research and routine admin so your team can focus on high-impact work.",
-  "Turn raw data into dashboards and forecasts that guide every decision — operational, financial and strategic.",
-  "Extract, classify and route documents automatically. No more manual data entry from PDFs and scans.",
-  "Spot failures before they cost you downtime, with sensor-driven models trained on your own equipment data.",
-];
