@@ -69,12 +69,6 @@ export function HeroSection() {
               <span>Book a consultation</span>
               <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href="/services"
-              className="text-[13px] text-canvas/85 hover:text-canvas link-underline"
-            >
-              See what we do
-            </Link>
           </div>
         </motion.div>
       </Container>

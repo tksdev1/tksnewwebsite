@@ -6,14 +6,6 @@ import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
 import { Wordmark } from "./logo";
 
-type NavChild = { label: string; href: string };
-const subNav: Record<string, NavChild[]> = {
-  "/services": [
-    { label: "All services", href: "/services" },
-    { label: "AI Transformation", href: "/services/ai" },
-  ],
-};
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -31,66 +23,14 @@ export function SiteHeader() {
               .filter((n) => n.href !== "/")
               .map((item) => {
                 const active = pathname.startsWith(item.href);
-                const children = subNav[item.href];
-
-                if (!children) {
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`nav-link ${active ? "active" : ""}`}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                }
-
                 return (
-                  <div key={item.href} className="relative group">
-                    <Link
-                      href={item.href}
-                      className={`nav-link inline-flex items-center gap-1.5 ${active ? "active" : ""}`}
-                      aria-haspopup="true"
-                    >
-                      {item.label}
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                        className="transition-transform group-hover:rotate-180"
-                      >
-                        <path d="M6 9l6 6 6-6" />
-                      </svg>
-                    </Link>
-
-                    {/* Dropdown — outer wrapper has transparent top padding to bridge hover gap */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity">
-                      <div className="min-w-[220px] bg-canvas border border-line rounded-md shadow-lg py-2">
-                        {children.map((child) => {
-                          const childActive = pathname === child.href;
-                          return (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className={`block px-5 py-2.5 text-[13px] tracking-wide transition ${
-                                childActive
-                                  ? "text-accent"
-                                  : "text-ink-soft hover:text-accent hover:bg-canvas-2"
-                              }`}
-                            >
-                              {child.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`nav-link ${active ? "active" : ""}`}
+                  >
+                    {item.label}
+                  </Link>
                 );
               })}
           </nav>
@@ -139,36 +79,15 @@ export function SiteHeader() {
                 item.href === "/"
                   ? pathname === "/"
                   : pathname.startsWith(item.href);
-              const children = subNav[item.href];
               return (
-                <div key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className={`block py-2.5 nav-link ${active ? "active" : ""}`}
-                  >
-                    {item.label}
-                  </Link>
-                  {children && (
-                    <div className="pl-4 border-l border-line ml-1 mb-2">
-                      {children
-                        .filter((c) => c.href !== item.href)
-                        .map((child) => {
-                          const childActive = pathname === child.href;
-                          return (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              onClick={() => setOpen(false)}
-                              className={`block py-2 nav-link ${childActive ? "active" : ""}`}
-                            >
-                              {child.label}
-                            </Link>
-                          );
-                        })}
-                    </div>
-                  )}
-                </div>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`block py-2.5 nav-link ${active ? "active" : ""}`}
+                >
+                  {item.label}
+                </Link>
               );
             })}
             <Link
