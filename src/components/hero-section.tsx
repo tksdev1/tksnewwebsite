@@ -28,7 +28,7 @@ export function HeroSection() {
         >
           <span className="num-label !text-accent">Est. {site.established}</span>
           <span className="h-px w-10 bg-canvas/30" />
-          <span className="eyebrow !text-canvas/70">Boutique consulting firm</span>
+          <span className="eyebrow !text-canvas/70">Phoenix, AZ · Since 2016</span>
         </motion.div>
 
         {/* Headline — word-by-word reveal */}
@@ -59,10 +59,9 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.75, ease: "easeOut" }}
         >
           <p className="md:col-span-6 lg:col-span-5 text-[18px] leading-relaxed text-canvas/85">
-            TechKey Solutions helps small and mid-sized businesses implement
-            practical AI solutions that reduce manual work, improve customer
-            response times, and help teams scale efficiently. We focus on real
-            operational outcomes — not experimental AI projects.
+            We&apos;re a small team that helps growing businesses get repetitive work
+            off their plate using AI automation. Not demos — the kind that actually
+            sticks because we stay involved after the launch.
           </p>
           <div className="md:col-span-6 lg:col-start-8 lg:col-span-5 flex flex-wrap items-center gap-4">
             <Link href="/contact" className="btn-primary">

@@ -12,43 +12,6 @@ export const metadata: Metadata = {
     "Since 2016, TechKey Solutions has been a trusted technology partner delivering CRM, ERP, AI, and integration solutions.",
 };
 
-const team = [
-  {
-    name: "Yuval De-Medonsa",
-    role: "Lead Consultant",
-    bio: "15+ years across software, data, analytics and BI. Background in financial services and solar. Off the clock: racing, car shows and rallies.",
-  },
-  {
-    name: "Joe Palenzuela",
-    role: "Consultant",
-    bio: "Data scientist with 7+ years of experience. Owns problems end-to-end. Culinary experimenter in his spare time.",
-  },
-  {
-    name: "Kimberly Parker",
-    role: "Consultant",
-    bio: "Software development grad focused on building accessible features. Fan of video games, series, movies and collectibles.",
-  },
-  {
-    name: "Mikey Patel",
-    role: "Lead Developer",
-    bio: "Leads engineering delivery across our CRM, AI and integration projects.",
-  },
-  {
-    name: "Rupesh Chhabra",
-    role: "Developer",
-    bio: "Full-stack developer shipping reliable integrations and web apps.",
-  },
-  {
-    name: "Gaurav Sadawarte",
-    role: "Developer",
-    bio: "Developer focused on clean, maintainable product engineering.",
-  },
-  {
-    name: "Ross Cohen",
-    role: "Analyst / Project Manager",
-    bio: "Keeps engagements on track and outcomes in focus — bridging clients and the build team.",
-  },
-];
 
 const values = [
   {
@@ -76,13 +39,6 @@ const stats = [
   { label: "Platforms", value: 18, prefix: "", suffix: "+" },
 ];
 
-function initials(name: string) {
-  return name
-    .split(" ")
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("");
-}
 
 export default function AboutPage() {
   return (
@@ -173,46 +129,13 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* TEAM */}
-      <section className="py-24 border-y border-line bg-canvas-2">
-        <Container>
-          <AnimateIn>
-            <SectionHeading
-              index="II."
-              eyebrow="The team"
-              title="Small team. Big range of expertise."
-            />
-          </AnimateIn>
-          <ul className="mt-16 divide-y divide-line border-y border-line">
-            {team.map((member, i) => (
-              <AnimateIn key={member.name} delay={i * 0.06}>
-                <li className="grid md:grid-cols-12 gap-6 py-8 items-baseline hover:bg-canvas/50 transition px-2 -mx-2">
-                  <div className="md:col-span-1">
-                    <span className="num-label">{initials(member.name)}</span>
-                  </div>
-                  <div className="md:col-span-4">
-                    <h3 className="display text-2xl text-ink leading-tight">
-                      {member.name}
-                    </h3>
-                    <p className="num-label mt-2">{member.role}</p>
-                  </div>
-                  <p className="md:col-span-7 text-[15px] leading-relaxed text-ink-soft">
-                    {member.bio}
-                  </p>
-                </li>
-              </AnimateIn>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
       {/* CTA */}
       <section className="py-28">
         <Container>
           <AnimateIn>
             <div className="grid lg:grid-cols-12 gap-10 items-end">
               <div className="lg:col-span-8">
-                <p className="num-label">III. / Meet the team</p>
+                <p className="num-label">II. / Next step</p>
                 <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
                   Let&apos;s trade notes on your project.
                 </h2>

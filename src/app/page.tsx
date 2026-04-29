@@ -5,76 +5,22 @@ import { HeroSection } from "@/components/hero-section";
 import { AnimateIn } from "@/components/animate-in";
 import { site } from "@/lib/site";
 
-const iconProps = {
-  width: 32,
-  height: 32,
-  viewBox: "0 0 24 24",
-  fill: "none",
-  stroke: "currentColor",
-  strokeWidth: 1.5,
-  strokeLinecap: "round" as const,
-  strokeLinejoin: "round" as const,
-};
-
-const serviceTiles = [
-  {
-    title: "Lead & Sales Automation",
-    href: "/services/ai",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Customer Service AI",
-    href: "/services/ai",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Workflow Automation",
-    href: "/services/ai",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <rect width="16" height="16" x="4" y="4" rx="2" />
-        <rect width="6" height="6" x="9" y="9" rx="1" />
-        <path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Reporting & Dashboards",
-    href: "/services/ai",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <line x1="18" x2="18" y1="20" y2="10" />
-        <line x1="12" x2="12" y1="20" y2="4" />
-        <line x1="6" x2="6" y1="20" y2="14" />
-      </svg>
-    ),
-  },
-];
-
 const principles = [
   {
-    title: "Real results, not experiments.",
-    body: "Every automation we implement is tied to a measurable outcome — leads converted, hours reclaimed, costs reduced. No vanity AI projects.",
+    title: "We tie every project to a real number.",
+    body: "More leads converted, hours saved, support tickets handled automatically. If we can't attach a measurable outcome to an automation, we won't pitch it to you.",
   },
   {
-    title: "Done-for-you implementation.",
-    body: "We handle the full process: workflow analysis, automation build, staff training, and ongoing optimization. Your team gets the benefits without the technical overhead.",
+    title: "We stay involved past launch day.",
+    body: "You get the workflow analysis, the build, the staff training, and post-launch tuning — included. The automations that fail are usually the ones nobody's checking on after go-live.",
   },
   {
-    title: "Right-sized for your business.",
-    body: "Our solutions are built for small and mid-sized businesses — practical scope, efficient timelines, and investments that make sense at your scale.",
+    title: "Built for your budget, not a Fortune 500's.",
+    body: "Our work is sized for small and mid-sized teams. Practical scope, fast timelines, and investments that make sense at your stage of growth.",
   },
   {
-    title: "Optimization built in.",
-    body: "Every engagement includes mandatory post-launch support so your automations keep improving — not just deployed and forgotten.",
+    title: "Your automations should evolve as you do.",
+    body: "Every engagement includes mandatory post-launch support. Your business keeps changing — your workflows need to keep up.",
   },
 ];
 
@@ -90,14 +36,14 @@ const aiSolutions = [
 ];
 
 const aiSolutionBodies = [
-  "Automatically follow up with leads, qualify prospects, and sync activity to your CRM — so no opportunity falls through the cracks.",
-  "Always-on AI that handles routine customer inquiries, routes support tickets, and escalates issues — without adding headcount.",
-  "Intelligent scheduling that coordinates appointments, staff, and resources without back-and-forth email chains.",
-  "Clean up your CRM data, automate data entry, and build workflows that keep your pipeline healthy and up to date.",
-  "Automatically generate, route, and process proposals, contracts, and business documents — cutting hours from every deal.",
-  "Custom AI assistants trained on your processes to answer team questions, surface knowledge, and guide daily decisions.",
-  "Real-time dashboards and automated reports that give leadership clear visibility into performance, KPIs, and trends.",
-  "End-to-end automation of multi-step business processes — eliminating manual handoffs and human error across departments.",
+  "Your CRM shouldn't need a babysitter. We set up follow-up sequences, lead scoring, and pipeline updates that run automatically — so your team focuses on conversations, not data entry.",
+  "An AI that handles routine questions around the clock, routes the complex ones to the right person, and logs everything. Your support team stops drowning in repeat inquiries.",
+  "No more back-and-forth to find a time. Intelligent scheduling that coordinates staff, clients, and resources without a single email chain.",
+  "Bad CRM data is a silent killer. We clean up duplicate records, automate data entry, and build workflows that keep your pipeline accurate without manual upkeep.",
+  "Generate proposals, contracts, and reports automatically. Cut hours from every deal cycle without anyone touching a template.",
+  "A custom AI trained on your team's processes — answers questions, surfaces the right information, and helps new staff get up to speed faster.",
+  "Real-time visibility into what actually matters. Dashboards that surface the metrics leadership needs, automatically updated, no spreadsheet required.",
+  "We map your multi-step workflows, identify every manual handoff, and build something that runs itself. Less human error, fewer dropped balls.",
 ];
 
 const partners = [
@@ -127,15 +73,34 @@ export default function HomePage() {
       {/* HERO */}
       <HeroSection />
 
+      {/* WHO WE ARE */}
+      <section className="py-16 border-b border-line">
+        <Container>
+          <AnimateIn>
+            <div className="grid lg:grid-cols-12 gap-10 items-baseline">
+              <p className="lg:col-span-7 text-[19px] leading-relaxed text-ink-soft">
+                We&apos;re a seven-person team based in Phoenix. We&apos;ve been building CRM,
+                ERP, and integration solutions since 2016 — and for the past few years,
+                most of what we build is AI automation. We work directly with the people
+                who&apos;ll use what we build, and we stay involved long after the launch.
+              </p>
+              <div className="lg:col-span-4 lg:col-start-9 flex flex-col gap-3">
+                <a href="/services" className="text-[14px] link-underline text-ink-soft">See our packages →</a>
+              </div>
+            </div>
+          </AnimateIn>
+        </Container>
+      </section>
+
       {/* PRINCIPLES / WHY */}
       <section className="py-24">
         <Container>
           <AnimateIn>
             <SectionHeading
               index="I."
-              eyebrow="Why TechKey"
-              title="AI that earns its keep."
-              lede="We implement practical AI solutions that reduce manual work, improve response times, and help your team scale — without the experimentation overhead."
+              eyebrow="Our approach"
+              title="What makes us different."
+              lede="A lot of AI consultants will deploy something and disappear. We work differently — and these four things are why our clients keep coming back."
             />
           </AnimateIn>
 
@@ -158,49 +123,15 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-24 border-y border-line bg-canvas-2">
+      {/* WHAT WE BUILD */}
+      <section className="py-24 border-t border-line">
         <Container>
           <AnimateIn>
             <SectionHeading
               index="II."
-              eyebrow="Common solutions"
-              title="The automations that move the needle fastest."
-              lede="We focus on high-impact, proven AI implementations — not science projects. These are the solutions small and mid-sized businesses use every day."
-            />
-          </AnimateIn>
-
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {serviceTiles.map((tile, i) => (
-              <AnimateIn key={tile.title} delay={i * 0.1}>
-                <Link href={tile.href} className="tile-card">
-                  <span className="tile-card-icon">{tile.icon}</span>
-                  <span className="tile-card-label">{tile.title}</span>
-                </Link>
-              </AnimateIn>
-            ))}
-          </div>
-
-          <AnimateIn delay={0.3}>
-            <Link
-              href="/services"
-              className="mt-12 inline-flex items-center gap-2 text-[14px] text-ink link-underline"
-            >
-              See all packages & pricing →
-            </Link>
-          </AnimateIn>
-        </Container>
-      </section>
-
-      {/* AI IN ACTION */}
-      <section className="py-24">
-        <Container>
-          <AnimateIn>
-            <SectionHeading
-              index="III."
-              eyebrow="What we automate"
-              title="Eight solutions, proven in the field."
-              lede="The best first AI projects eliminate a repetitive, high-volume task your team hates doing. Here's what we deploy for small and mid-sized businesses."
+              eyebrow="What we build"
+              title="The automations our clients ask for most."
+              lede="These aren't theoretical capabilities — every one of these is something we've deployed and tuned for a real business. Most projects start with one or two, then expand from there."
             />
           </AnimateIn>
 
@@ -269,14 +200,14 @@ export default function HomePage() {
           <AnimateIn>
             <div className="grid lg:grid-cols-12 gap-10 items-end">
               <div className="lg:col-span-8">
-                <p className="num-label">IV. / Next step</p>
+                <p className="num-label">III. / Next step</p>
                 <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
-                  Ready to see where AI pays off in your business?
+                  Start with a conversation, not a contract.
                 </h2>
                 <p className="mt-6 text-[17px] leading-relaxed text-ink-soft max-w-xl">
-                  We&apos;ll analyze your workflows, identify your highest-ROI
-                  automation opportunities, and build a 60-day roadmap — no
-                  jargon, no fluff.
+                  We&apos;ll walk through your workflows together, find where AI
+                  actually moves the needle, and put together an honest 60-day
+                  plan. First call is free — no pitch, no pressure.
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-4">
