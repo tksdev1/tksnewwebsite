@@ -42,6 +42,3 @@ next-env.d.ts
 
 # design system reference (extracted zip — large, not source)
 /design-system
-
-# Claude Code local config
-.claude/
