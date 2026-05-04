@@ -7,14 +7,12 @@ export const site = {
   phone: "480-658-5391",
   phoneHref: "tel:+14806585391",
   social: {
-    facebook: "https://www.facebook.com/theofficialtks",
-    linkedin: "https://www.linkedin.com/company/techkey-solutions/",
+    linkedin: "https://www.linkedin.com/company/techkey-solutions-llc",
   },
   nav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+{ label: "Contact", href: "/contact" },
   ],
 } as const;

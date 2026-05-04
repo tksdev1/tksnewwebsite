@@ -42,10 +42,10 @@ export function SiteHeader() {
             >
               {site.email}
             </a>
-            <Link href="/contact" className="btn-primary">
-              <span>Book a call</span>
+            <a href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <span>Book a Consultation</span>
               <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </div>
 
           <button
@@ -90,14 +90,16 @@ export function SiteHeader() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
+            <a
+              href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-4 btn-primary"
             >
-              <span>Book a call</span>
+              <span>Book a Consultation</span>
               <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </div>
         )}
       </div>

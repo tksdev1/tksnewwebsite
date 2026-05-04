@@ -74,12 +74,12 @@ export default function HomePage() {
       <HeroSection />
 
       {/* WHO WE ARE */}
-      <section className="py-16 border-b border-line">
+      <section className="py-16 border-b border-line bg-canvas-2">
         <Container>
           <AnimateIn>
             <div className="grid lg:grid-cols-12 gap-10 items-baseline">
               <p className="lg:col-span-7 text-[19px] leading-relaxed text-ink-soft">
-                We&apos;re a seven-person team based in Phoenix. We&apos;ve been building CRM,
+                We&apos;ve been building CRM,
                 ERP, and integration solutions since 2016 — and for the past few years,
                 most of what we build is AI automation. We work directly with the people
                 who&apos;ll use what we build, and we stay involved long after the launch.
@@ -104,16 +104,15 @@ export default function HomePage() {
             />
           </AnimateIn>
 
-          <div className="mt-20 grid md:grid-cols-2 gap-x-16 gap-y-14 md:border-t md:border-line md:pt-14">
+          <div className="mt-12 grid md:grid-cols-2 gap-5">
             {principles.map((p, i) => (
               <AnimateIn key={p.title} delay={i * 0.1}>
-                <div className="relative">
-                  <span className="num-label">0{i + 1}</span>
-                  <h3 className="display mt-3 text-2xl text-ink leading-[1.1]">
+                <div className="rounded-2xl border border-line bg-canvas-2 p-8 flex flex-col h-full">
+                  <h3 className="display text-2xl text-ink leading-[1.15]">
                     {p.title}
                   </h3>
                   <p
-                    className="mt-4 text-[15px] leading-relaxed text-ink-soft"
+                    className="mt-4 text-[15px] leading-relaxed text-ink-soft flex-1"
                     dangerouslySetInnerHTML={{ __html: p.body }}
                   />
                 </div>
@@ -135,20 +134,19 @@ export default function HomePage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-line">
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {aiSolutions.map((title, i) => (
-              <AnimateIn key={title} delay={(i % 3) * 0.08}>
-                <div className="border-r border-b border-line p-8 hover:bg-canvas-blue/40 transition group h-full">
-                  <span className="num-label">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="display mt-5 text-2xl text-ink leading-tight">
+              <AnimateIn key={title} delay={(i % 4) * 0.07}>
+                <div className="rounded-2xl border border-line bg-canvas p-7 hover:border-accent/40 hover:shadow-sm transition group h-full flex flex-col">
+                  <h3 className="display text-xl text-ink leading-tight">
                     {title}
                   </h3>
-                  <p className="mt-3 text-[14px] text-ink-soft leading-relaxed">
+                  <p className="mt-3 text-[14px] text-ink-soft leading-relaxed flex-1">
                     {aiSolutionBodies[i]}
                   </p>
                   <span
                     aria-hidden="true"
-                    className="mt-6 inline-block text-ink-soft group-hover:translate-x-0.5 group-hover:text-accent transition"
+                    className="mt-5 inline-block text-ink-soft/40 group-hover:text-accent group-hover:translate-x-0.5 transition"
                   >
                     →
                   </span>
@@ -211,10 +209,10 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-4">
-                <Link href="/contact" className="btn-primary">
-                  <span>Book a free consultation</span>
+                <a href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <span>Book a Consultation</span>
                   <span aria-hidden="true">→</span>
-                </Link>
+                </a>
                 <a href={`mailto:${site.email}`} className="btn-secondary">
                   <span>{site.email}</span>
                   <span aria-hidden="true">↗</span>

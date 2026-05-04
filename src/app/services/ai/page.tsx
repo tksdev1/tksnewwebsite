@@ -222,10 +222,10 @@ export default function AITransformationPage() {
               business keeps running better long after launch.
             </p>
             <div className="md:col-span-6 lg:col-start-8 lg:col-span-5 flex flex-wrap items-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                <span>Schedule a strategy session</span>
+              <a href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <span>Book a Consultation</span>
                 <span aria-hidden="true">→</span>
-              </Link>
+              </a>
               <a
                 href="#methodology"
                 className="text-[13px] text-canvas/85 hover:text-canvas link-underline"
@@ -404,10 +404,10 @@ export default function AITransformationPage() {
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-4">
-              <Link href="/contact" className="btn-primary">
-                <span>Book a strategy session</span>
+              <a href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <span>Book a Consultation</span>
                 <span aria-hidden="true">→</span>
-              </Link>
+              </a>
               <a href={`mailto:${site.email}`} className="btn-secondary">
                 <span>{site.email}</span>
                 <span aria-hidden="true">↗</span>

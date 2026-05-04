@@ -68,14 +68,6 @@ export default function ContactPage() {
                     >
                       LinkedIn ↗
                     </a>
-                    <a
-                      href={site.social.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="display text-xl text-ink link-underline"
-                    >
-                      Facebook ↗
-                    </a>
                   </dd>
                 </div>
                 <div className="border-t border-line-strong pt-6">

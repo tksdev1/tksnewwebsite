@@ -34,7 +34,7 @@ export async function submitContactForm(
     return { ok: false, message: "Please enter a valid email address." };
   }
 
-  const to = process.env.CONTACT_TO_EMAIL || "info@thetks.com";
+  const to = ["yuval@thetks.com", "ross@thetks.com"];
   const from = process.env.CONTACT_FROM_EMAIL || "TKS Website <onboarding@resend.dev>";
   const apiKey = process.env.RESEND_API_KEY;
 

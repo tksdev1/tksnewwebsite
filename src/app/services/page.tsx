@@ -77,7 +77,7 @@ const implementationPackages = [
     bestFor: "Growing businesses automating multiple functions",
     fee: "$25,000",
     retainer: "+ $4,000/month support (4 months)",
-    timeline: "6–8 week implementation · 3 months optimization",
+    timeline: "6–8 week implementation · 4 months optimization",
     includes: [
       "Everything in Starter, plus:",
       "Multi-department workflow automation",
@@ -102,7 +102,7 @@ const implementationPackages = [
     bestFor: "Mid-sized businesses seeking broader transformation",
     fee: "$35,000",
     retainer: "+ $5,000/month support (6 months)",
-    timeline: "10–12 week implementation · 3 months optimization",
+    timeline: "10–12 week implementation · 6 months optimization",
     includes: [
       "Everything in Growth, plus:",
       "Custom AI assistants",
@@ -352,10 +352,10 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-4">
-                <Link href="/contact" className="btn-primary">
-                  <span>Book a free consultation</span>
+                <a href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <span>Book a Consultation</span>
                   <span aria-hidden="true">→</span>
-                </Link>
+                </a>
                 <Link href="/services/ai" className="btn-secondary">
                   <span>See our methodology</span>
                   <span aria-hidden="true">→</span>

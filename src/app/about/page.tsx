@@ -34,7 +34,7 @@ const values = [
 
 const stats = [
   { label: "Founded", value: 2016, prefix: "", suffix: "" },
-  { label: "Team members", value: 7, prefix: "", suffix: "" },
+  { label: "Clients served", value: 50, prefix: "", suffix: "+" },
   { label: "Practice areas", value: 4, prefix: "", suffix: "" },
   { label: "Platforms", value: 18, prefix: "", suffix: "+" },
 ];
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </p>
               <figcaption className="mt-10 flex items-center gap-4 num-label">
                 <span className="h-px w-10 bg-line-strong" />
-                Yuval De-Medonsa, Lead Consultant
+                TechKey Solutions
               </figcaption>
             </figure>
           </AnimateIn>
@@ -113,13 +113,12 @@ export default function AboutPage() {
               title="How we show up for clients."
             />
           </AnimateIn>
-          <div className="mt-16 grid md:grid-cols-2 gap-x-16 gap-y-12 border-t border-line pt-12">
+          <div className="mt-12 grid md:grid-cols-2 gap-5">
             {values.map((v, i) => (
               <AnimateIn key={v.title} delay={i * 0.1}>
-                <div>
-                  <span className="num-label">0{i + 1}</span>
-                  <h3 className="display mt-3 text-2xl text-ink">{v.title}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-ink-soft max-w-prose">
+                <div className="rounded-2xl border border-line bg-canvas-2 p-8 flex flex-col h-full">
+                  <h3 className="display text-2xl text-ink">{v.title}</h3>
+                  <p className="mt-4 text-[15px] leading-relaxed text-ink-soft flex-1">
                     {v.body}
                   </p>
                 </div>
@@ -140,15 +139,15 @@ export default function AboutPage() {
                   Let&apos;s trade notes on your project.
                 </h2>
                 <p className="mt-6 text-[17px] leading-relaxed text-ink-soft max-w-xl">
-                  Thirty minutes with Yuval. No sales pitch — just a clear read on
+                  Thirty minutes, no sales pitch — just a clear read on
                   what&apos;s possible, what&apos;s not, and where to start.
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-4">
-                <Link href="/contact" className="btn-primary">
-                  <span>Book a meeting with Yuval</span>
+                <a href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <span>Book a Consultation</span>
                   <span aria-hidden="true">→</span>
-                </Link>
+                </a>
                 <Link href="/services" className="btn-secondary">
                   <span>Explore our services</span>
                   <span aria-hidden="true">→</span>

@@ -88,13 +88,15 @@ export default async function BlogPostPage({
                   <h3 className="display text-3xl text-ink leading-[1.1]">
                     Work with us.
                   </h3>
-                  <Link
-                    href="/contact"
+                  <a
+                    href="https://calendly.com/techkeysolutions/15min?utm_medium=email&_hsenc=p2ANqtz-8Uo4hFPiyIJMLoVJ8ysbViG3qZWXmaEuPpcbIaUvunpYvYq_UzMMnn-t7eYLYmhtyL0H5joyGZbb9P3_TYzOb-XHeAHA&_hsmi=2&utm_content=2&utm_source=hs_email&month=2026-05"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 text-[14px] text-ink link-underline"
                   >
-                    Book a call
+                    Book a Consultation
                     <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
