@@ -76,14 +76,13 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* TKS hero headline — ALL CAPS, extrabold, balanced */
+/* TKS hero headline — extrabold, balanced, sentence case */
 .hero-headline {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.5rem, 5.5vw + 1rem, 5rem);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
@@ -141,7 +140,7 @@ body {
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.04em;
-  border-radius: 4px;
+  border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -164,7 +163,7 @@ body {
   font-size: 0.875rem;
   letter-spacing: 0.04em;
   border: 1px solid var(--color-line-strong);
-  border-radius: 4px;
+  border-radius: 10px;
   text-decoration: none;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
