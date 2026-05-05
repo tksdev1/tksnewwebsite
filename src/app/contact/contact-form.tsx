@@ -4,12 +4,6 @@ import { useState } from "react";
 
 type State = { ok: boolean; message: string };
 
-function encode(data: Record<string, string>) {
-  return Object.entries(data)
-    .map(([k, v]) => encodeURIComponent(k) + "=" + encodeURIComponent(v))
-    .join("&");
-}
-
 export function ContactForm() {
   const [state, setState] = useState<State>({ ok: false, message: "" });
   const [pending, setPending] = useState(false);
@@ -26,10 +20,15 @@ export function ContactForm() {
 
     setPending(true);
     try {
-      const res = await fetch("/", {
+      const res = await fetch("https://formspree.io/f/mkoyraky", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...data }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }),
       });
       if (res.ok) {
         setState({ ok: true, message: "Thanks — we'll be in touch." });
@@ -45,15 +44,7 @@ export function ContactForm() {
   };
 
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="company"
-      onSubmit={handleSubmit}
-      className="space-y-6"
-    >
-      <input type="hidden" name="form-name" value="contact" />
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid sm:grid-cols-2 gap-6">
         <Field label="Name" name="name" required />
         <Field label="Email" name="email" type="email" required />
