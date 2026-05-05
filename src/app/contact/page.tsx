@@ -29,6 +29,15 @@ export default function ContactPage() {
         </Container>
       </section>
 
+      {/* Hidden form so Netlify detects fields at build time */}
+      <form name="contact" data-netlify="true" data-netlify-honeypot="company" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="subject" />
+        <textarea name="message" />
+        <input type="text" name="company" />
+      </form>
+
       <section className="py-20 lg:py-28">
         <Container>
           <div className="grid lg:grid-cols-12 gap-16">
